@@ -1,0 +1,1 @@
+g++ -o file.out main.cpp src/Template.cpp
