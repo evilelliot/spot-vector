@@ -1,4 +1,4 @@
-#include "Evaluator.hpp"
+#include "../include/Evaluator.hpp"
 #include <regex>
 #include <string>
 #include <iostream>
@@ -119,40 +119,40 @@ void Evaluator::vector_3D(string x, string y, string z){
   cout << "X = " << x << " Y = " << y << " Z = " << z << endl;
 }
 void Evaluator::sum_v2D(string x, string y, string x1, string y1){
-  cout << "R => (" << stof(x) + stof(x1) << "," << stof(y) + stof(y1) << ")" << endl; 
+  cout << "R\u2192 (" << stof(x) + stof(x1) << "," << stof(y) + stof(y1) << ")" << endl; 
 }
 void Evaluator::sumb_v2D(string x, string y, string x1, string y1){
-  cout << "R => (" << stof(x) + stof(x1) << "," << stof(y) + stof(y1) << ")" << endl; 
+  cout << "R\u2192 (" << stof(x) + stof(x1) << "," << stof(y) + stof(y1) << ")" << endl; 
 }
 void Evaluator::sumbr_v2D(string x, string y, string x1, string y1, string x2, string y2){
   float v1_x = stof(x) + stof(x1);
   float v1_y = stof(y) + stof(y1);
-  cout << "R => (" << v1_x + stof(x2) << "," << v1_y + stof(y2) << ")" << endl; 
+  cout << "R\u2192 (" << v1_x + stof(x2) << "," << v1_y + stof(y2) << ")" << endl; 
 }
 void Evaluator::sumbl_v2D(string x, string y, string x1, string y1, string x2, string y2){
   float v1_x = stof(x) + stof(x1);
   float v1_y = stof(y) + stof(y1);
-  cout << "R => (" << v1_x + stof(x2) << "," << v1_y + stof(y2) << ")" << endl; 
+  cout << "R\u2192 (" << v1_x + stof(x2) << "," << v1_y + stof(y2) << ")" << endl; 
 }
 void Evaluator::res_v2D(string x, string y, string x1, string y1){
-  cout << "R => (" << stof(x) - stof(x1) << "," << stof(y) - stof(y1) << ")" << endl; 
+  cout << "R\u2192 (" << stof(x) - stof(x1) << "," << stof(y) - stof(y1) << ")" << endl; 
 }
 void Evaluator::resb_v2D(string x, string y, string x1, string y1){
-  cout << "R => (" << stof(x) - stof(x1) << "," << stof(y) - stof(y1) << ")" << endl; 
+  cout << "R\u2192 (" << stof(x) - stof(x1) << "," << stof(y) - stof(y1) << ")" << endl; 
 }
 void Evaluator::resbr_v2D(string x, string y, string x1, string y1, string x2, string y2){
   float v1_x = stof(x) - stof(x1);
   float v1_y = stof(y) - stof(y1);
-  cout << "R => (" << v1_x - stof(x2) << "," << v1_y - stof(y2) << ")" << endl; 
+  cout << "R\u2192 (" << v1_x - stof(x2) << "," << v1_y - stof(y2) << ")" << endl; 
 }
 void Evaluator::resbl_v2D(string x, string y, string x1, string y1, string x2, string y2){
   float v1_x = stof(x) + stof(x1);
   float v1_y = stof(y) + stof(y1);
-  cout << "R => (" << v1_x + stof(x2) << "," << v1_y + stof(y2) << ")" << endl; 
+  cout << "R\u2192 (" << v1_x + stof(x2) << "," << v1_y + stof(y2) << ")" << endl; 
 }
 void Evaluator::sum_v3D(string x, string y, string z, string x1, string y1, string z1){
-  cout << "R => (" << stof(x)+stof(x1) <<","<<stof(y)+stof(y1)<<","<<stof(z)+stof(z1)<<")"<<endl;
+  cout << "R\u2192 (" << stof(x)+stof(x1) <<","<<stof(y)+stof(y1)<<","<<stof(z)+stof(z1)<<")"<<endl;
 }
 void Evaluator::sumb_v3D(string x, string y, string z, string x1, string y1, string z1){
-  cout << "R => (" << stof(x)+stof(x1) <<","<<stof(y)+stof(y1)<<","<<stof(z)+stof(z1)<<")"<<endl;
+  cout << "R\u2192 (" << stof(x)+stof(x1) <<","<<stof(y)+stof(y1)<<","<<stof(z)+stof(z1)<<")"<<endl;
 }

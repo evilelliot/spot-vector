@@ -1,9 +1,9 @@
 /*
 * Author: Alberto Ocaranza
 */
-#include "src/Template.hpp"
-#include "src/OperationIdentifier.hpp"
-#include "src/Evaluator.hpp"
+#include "include/Template.hpp"
+#include "include/OperationIdentifier.hpp"
+#include "include/Evaluator.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
