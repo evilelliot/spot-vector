@@ -31,7 +31,8 @@ void Template::help(){
     cout << "--------------------------------------" << endl;
 }
 void Template::version(){
-    cout << "CLI-Test 1.0.1" << endl;
+    // lmao I totally forgot to update this message
+    cout << "\033[1;32mSpot 1.7.1\033[0m" << endl;
 }
 void Template::credits(){
     cout << "Made by: Alberto Ocaranza (fevil)" << endl;
