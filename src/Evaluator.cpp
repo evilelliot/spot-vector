@@ -15,11 +15,13 @@ using namespace std;
 
 
 Evaluator::Evaluator(string type, string e): _exp(e){
-  const bool DEBUG = true;
+  const bool DEBUG = false;
   Tokenizer tk;
   vector<float> list = tk.numbers(_exp);
   
+  // Used to show operation type
   cout << (DEBUG? type: " ") << endl;
+  
   if(type == "vector_2D"){
     this->vector_2D(list);
   }else if(type == "vector_3D"){
@@ -127,3 +129,27 @@ void Evaluator::module_v2D(vector<float> data){
     cout << "(|R\u2192|) = " << sqrt(pow(data[0],2) + pow(data[1],2) + pow(data[2],2) ) << endl;
   }
 }
+void Evaluator::point_product(vector<float> v1, vector<float> v2){
+  float dot_product = 0;
+  if(v1.size() >= 2 && v2.size() >= 2){
+    for(int i = 0; i < v1.size(); i++){
+      dot_product = dot_product + (v1[i] * v2[i]);
+    }
+    cout << "V\u2192 ⋅ W\u2192 = ";
+    cout << dot_product << endl;
+  }else{
+    cout << "Invalid arguments." << endl;
+  }
+}
+void Evaluator::cross_product(vector<float> v1, vector<float> v2){
+  float x, y, z;
+  x = (v1[1] * v2[2]) - (v1[2] * v2[1]);
+  y = -(v1[0] * v2[2] - v1[2] * v2[0]);
+  z = (v1[0] * v2[1]) - (v1[1] * v2[0]);
+
+  cout << "V\u2192 ⋅ W\u2192 = ";
+  cout << "{" << x << "," << y << "," << z << "}" << endl; 
+}
+
+
+

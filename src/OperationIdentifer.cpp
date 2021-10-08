@@ -31,13 +31,14 @@ string OperationIdentifier::identify(string exp){
   const regex esc_2D_s("((-?[0-9]\\d*(\\.\\d+)?))+(\\*)+(\\()+((-?[0-9]\\d*(\\.\\d+)?)+(\\,)+(-?[0-9]\\d*(\\.\\d+)?))+(\\))");
   const regex module_v2D("(\\!)+(\\()+((?:\\d+(?:\\.\\d*)?|\\.\\d+))+(\\,)+((?:\\d+(?:\\.\\d*)?|\\.\\d+))+(\\))");
   const regex module_v3D("(\\!)+(\\()+((-?[0-9]\\d*(\\.\\d+)?)+(\\,)+(-?[0-9]\\d*(\\.\\d+)?))+(\\,)+(-?[0-9]\\d*(\\.\\d+)?)+(\\))");
+  const regex dot_product("(\\()+((-?[0-9]\\d*(\\.\\d+)?)+(\\,)+(-?[0-9]\\d*(\\.\\d+)?))+(\\,)+(-?[0-9]\\d*(\\.\\d+)?)+(\\))+(\\>)+(\\()+((-?[0-9]\\d*(\\.\\d+)?)+(\\,)+(-?[0-9]\\d*(\\.\\d+)?))+(\\,)+(-?[0-9]\\d*(\\.\\d+)?)+(\\))");
 
-  const regex comparisson[] = {vector_2D,  vector_3D, sum_v2D, sumb_v2D, sumbl_v2D, sumbr_v2D, res_v2D, resb_v2D, resbl_v2D, resbr_v2D, sum_v3D, sumb_v3D, sumbl_v3D, sumbr_v3D, esc_2D_s, esc_2D_b, module_v2D, module_v3D};
-  const string types[] = {"vector_2D",  "vector_3D", "sum_v2D", "sumb_v2D", "sumbl_v2D", "sumbr_v2D", "res_v2D", "resb_v2D", "resbl_v2D", "resbr_v2D", "sum_v3D", "sumb_v3D", "sumbl_v3D", "sumbr_v3D", "esc_2D_s", "esc_2D_b", "module_v2D", "module_v3D"};
+  const regex comparisson[] = {vector_2D,  vector_3D, sum_v2D, sumb_v2D, sumbl_v2D, sumbr_v2D, res_v2D, resb_v2D, resbl_v2D, resbr_v2D, sum_v3D, sumb_v3D, sumbl_v3D, sumbr_v3D, esc_2D_s, esc_2D_b, module_v2D, module_v3D, dot_product};
+  const string types[] = {"vector_2D",  "vector_3D", "sum_v2D", "sumb_v2D", "sumbl_v2D", "sumbr_v2D", "res_v2D", "resb_v2D", "resbl_v2D", "resbr_v2D", "sum_v3D", "sumb_v3D", "sumbl_v3D", "sumbr_v3D", "esc_2D_s", "esc_2D_b", "module_v2D", "module_v3D", "dot_product"};
   int size_com = sizeof(comparisson) / sizeof(comparisson[0]);
   smatch matches;
   int aux_match = 0;
-  for(int i = 0; i < 18; i++){
+  for(int i = 0; i < 19; i++){
     if(regex_search(exp, matches, comparisson[i])){
       aux_match = i;
     }

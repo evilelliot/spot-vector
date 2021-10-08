@@ -16,6 +16,7 @@ class Evaluator{
   string _exp;
   public:
   Evaluator(string type, string exp);
+  Evaluator(){}
   void vector_2D(vector<float>);
   void vector_3D(vector<float>);
   void sum_v2D(vector<float>);
@@ -31,6 +32,8 @@ class Evaluator{
   void sumbl_v3D(vector<float>);
   void esc_2D_s(vector<float>);
   void module_v2D(vector<float>);
+  void point_product(vector<float>, vector<float>);
+  void cross_product(vector<float>, vector<float>);
 };
 
 #endif

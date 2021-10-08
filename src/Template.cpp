@@ -11,11 +11,24 @@
 using namespace std;
 
 void Template::help(){
-    cout << "usage: spot [options]" << endl;
-    cout << "-h | -H | help  Shows a help message." << endl;
-    cout << "-v | -V | version  Shows the program's current version." << endl;
-    cout << "-c | -C | credits  Shows the author's information." << endl;
-    cout << "-o | -o | operate  [some expression] Evaluates a vectorial algebgra expression (read docs)." << endl;
+    cout << "--------------------------------------" << endl;
+    cout << R"(
+   _____             __ 
+  / ___/____  ____  / /_
+  \__ \/ __ \/ __ \/ __/
+ ___/ / /_/ / /_/ / /_  
+/____/ .___/\____/\__/  
+    /_/                                     
+)" << '\n';
+    cout << "--------------------------------------" << endl;
+    cout << "usage:\033[1;32m spot \033[0m \033[1;33m[options]\033[0m \033[1;36m(arguments)\033[0m" << endl;
+    cout << "-h  | -H  | help" << endl;
+    cout << "-v  | -V  | version" << endl;
+    cout << "-c  | -C  | credits" << endl;
+    cout << "-o  | -o  | operate [some expression]" << endl;
+    cout << "-d  | -D  | dot [vector] [vector]" << endl;
+    cout << "-cr | -CR | cross [vector] [vector]" << endl;
+    cout << "--------------------------------------" << endl;
 }
 void Template::version(){
     cout << "CLI-Test 1.0.1" << endl;

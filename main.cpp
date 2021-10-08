@@ -5,6 +5,7 @@
  * Contact: alt.ocaranza@gmail.com
  *
  */
+#include "include/Tokenizer.hpp"
 #include "include/Template.hpp"
 #include "include/OperationIdentifier.hpp"
 #include "include/Evaluator.hpp"
@@ -42,6 +43,20 @@ int main(int argc, char* argv[]){
             string type = op.identify(argList[1]);  
             Evaluator ev(type, argList[1]);      
           }
+        }else if(argList[0] == "-d"  || argList[0] == "-D" || argList[0] == "dot"){
+            Tokenizer tk;
+            Evaluator ev;
+            
+            vector<float> v1 = tk.numbers(argList[1]);
+            vector<float> v2 = tk.numbers(argList[2]);
+            ev.point_product(v1, v2); 
+        }else if(argList[0] == "-cr"  || argList[0] == "-CR" || argList[0] == "cross"){
+            Tokenizer tk;
+            Evaluator ev;
+            
+            vector<float> v1 = tk.numbers(argList[1]);
+            vector<float> v2 = tk.numbers(argList[2]);
+            ev.cross_product(v1, v2); 
         }
     }
     return 0;
