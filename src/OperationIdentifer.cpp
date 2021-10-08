@@ -1,3 +1,10 @@
+/**
+ * @file OperationIdentifier.cpp
+ *
+ * @author Alberto Ocaranza
+ * Contact: alt.ocaranza@gmail.com
+ *
+ */
 #include "../include/OperationIdentifier.hpp"
 #include <iostream>
 #include <string>

@@ -1,3 +1,10 @@
+/**
+ * @file Template.hpp
+ *
+ * @author Alberto Ocaranza
+ * Contact: alt.ocaranza@gmail.com
+ *
+ */
 #ifndef Template_hpp
 #define Template_hpp
 

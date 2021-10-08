@@ -1,26 +1,36 @@
+/**
+ * @file Evaluator.hpp
+ *
+ * @author Alberto Ocaranza
+ * Contact: alt.ocaranza@gmail.com
+ *
+ */
 #ifndef Evaluator_hpp
 #define Evaluator_hpp
 
-#include <regex>
 #include <string>
+#include <vector>
 using namespace std;
 
 class Evaluator{
   string _exp;
   public:
   Evaluator(string type, string exp);
-  void vector_2D(string x, string y);
-  void vector_3D(string x, string y, string z);
-  void sum_v2D(string x, string y, string x1, string y1);
-  void sumb_v2D(string x, string y, string x1, string y1);
-  void sumbr_v2D(string x, string y, string x1, string y1, string x2, string y2);
-  void sumbl_v2D(string x, string y, string x1, string y1, string x2, string y2);
-  void res_v2D(string x, string y, string x1, string y1);
-  void resb_v2D(string x, string y, string x1, string y1);
-  void resbr_v2D(string x, string y, string x1, string y1, string x2, string y2);
-  void resbl_v2D(string x, string y, string x1, string y1, string x2, string y2);
-  void sum_v3D(string x, string y, string z, string x1, string y1, string z1);
-  void sumb_v3D(string x, string y, string z, string x1, string y1, string z1);
+  void vector_2D(vector<float>);
+  void vector_3D(vector<float>);
+  void sum_v2D(vector<float>);
+  void sumb_v2D(vector<float>);
+  void sumbr_v2D(vector<float>);
+  void sumbl_v2D(vector<float>);
+  void res_v2D(vector<float>);
+  void resb_v2D(vector<float>);
+  void resbr_v2D(vector<float>);
+  void resbl_v2D(vector<float>);
+  void sum_v3D(vector<float>);
+  void sumb_v3D(vector<float>);
+  void sumbl_v3D(vector<float>);
+  void esc_2D_s(vector<float>);
+  void module_v2D(vector<float>);
 };
 
 #endif

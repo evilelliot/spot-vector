@@ -1,3 +1,10 @@
+/**
+ * @file OperationIdentifier.hpp
+ *
+ * @author Alberto Ocaranza
+ * Contact: alt.ocaranza@gmail.com
+ *
+ */
 #ifndef OperationIdentifier_hpp
 #define OperationIdentifier_hpp
 

@@ -1,6 +1,10 @@
-/*
-* Author: Alberto Ocaranza
-*/
+/**
+ * @file main.cpp
+ *
+ * @author Alberto Ocaranza
+ * Contact: alt.ocaranza@gmail.com
+ *
+ */
 #include "include/Template.hpp"
 #include "include/OperationIdentifier.hpp"
 #include "include/Evaluator.hpp"
@@ -9,7 +13,8 @@
 #include <vector>
 #include <sstream>
 using namespace std;
-// https://replit.com/join/bsxzoohtul-nomi-dev
+
+// Using my own CLI template.
 // https://github.com/evilelliot/Testing-CLI
 int main(int argc, char* argv[]){
     // Importing a testing class template

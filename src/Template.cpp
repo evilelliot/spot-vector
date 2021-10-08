@@ -1,3 +1,10 @@
+/**
+ * @file Template.cpp
+ *
+ * @author Alberto Ocaranza
+ * Contact: alt.ocaranza@gmail.com
+ *
+ */
 #include "../include/Template.hpp"
 #include <iostream>
 #include <string>
