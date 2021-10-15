@@ -7,6 +7,7 @@
  */
 #include "../include/Evaluator.hpp"
 #include "../include/Tokenizer.hpp"
+#include "../include/Vector2D.hpp"
 #include <math.h>
 #include <regex>
 #include <string>
@@ -126,7 +127,7 @@ void Evaluator::module_v2D(vector<float> data){
   if(data.size() == 2){
     cout << "(|R\u2192|) = " << sqrt(pow(data[0],2)+pow(data[1],2)) << endl;
   }else if(data.size() == 3){
-    cout << "(|R\u2192|) = " << sqrt(pow(data[0],2) + pow(data[1],2) + pow(data[2],2) ) << endl;
+    cout << "(|R\u2193|) = " << sqrt(pow(data[0],2) + pow(data[1],2) + pow(data[2],2) ) << endl;
   }
 }
 void Evaluator::point_product(vector<float> v1, vector<float> v2){

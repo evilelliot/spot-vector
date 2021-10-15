@@ -9,6 +9,8 @@
 #include "include/Template.hpp"
 #include "include/OperationIdentifier.hpp"
 #include "include/Evaluator.hpp"
+#include "include/Commands.hpp"
+#include "include/Vector2D.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -22,41 +24,45 @@ int main(int argc, char* argv[]){
     Template t;
     OperationIdentifier op;
     
-    // If argc equals 1, then no argument exists
+    // If argc equals 1, then no argument given
     if(argc == 1){
         cout << "Check -h for help!" << endl;
     }else{
-        // Converting argv char to an string argList (easier comparison)
-        std::vector<std::string> argList;
-        for(int i=1;i<argc;i++){
-            argList.push_back(argv[i]); 
-        }
+        vector<string> arguments = Commands::artos(argv, argc);
         // Parsing commands
-        if(argList[0] == "-h" || argList[0] == "-H" || argList[0] == "help"){
+        if(Commands::command(arguments[0], "Help")){
             t.help();
-        }else if(argList[0] == "-v"  || argList[0] == "-V" || argList[0] == "version"){
+        }else if(Commands::command(arguments[0], "Version")){
             t.version();    
-        }else if(argList[0] == "-c"  || argList[0] == "-C" || argList[0] == "credits"){
+        }else if(Commands::command(arguments[0], "Credits")){
             t.credits();
-        }else if(argList[0] == "-o"  || argList[0] == "-O" || argList[0] == "operate"){
-          if(argList.size() == 2){
-            string type = op.identify(argList[1]);  
-            Evaluator ev(type, argList[1]);      
+        }else if(Commands::command(arguments[0], "Operate")){
+          if(arguments.size() == 2){
+            string type = op.identify(arguments[1]);  
+            Evaluator ev(type, arguments[1]);      
           }
-        }else if(argList[0] == "-d"  || argList[0] == "-D" || argList[0] == "dot"){
+        }else if(Commands::command(arguments[0], "Dot")){
             Tokenizer tk;
             Evaluator ev;
             
-            vector<float> v1 = tk.numbers(argList[1]);
-            vector<float> v2 = tk.numbers(argList[2]);
+            vector<float> v1 = tk.numbers(arguments[1]);
+            vector<float> v2 = tk.numbers(arguments[2]);
             ev.point_product(v1, v2); 
-        }else if(argList[0] == "-cr"  || argList[0] == "-CR" || argList[0] == "cross"){
+        }else if(Commands::command(arguments[0], "Cross")){
             Tokenizer tk;
             Evaluator ev;
             
-            vector<float> v1 = tk.numbers(argList[1]);
-            vector<float> v2 = tk.numbers(argList[2]);
+            vector<float> v1 = tk.numbers(arguments[1]);
+            vector<float> v2 = tk.numbers(arguments[2]);
             ev.cross_product(v1, v2); 
+        }else if(Commands::command(arguments[0], "Angle")){
+            Tokenizer tk;
+            Vector2D v2;
+            
+            vector<float> v = tk.numbers(arguments[1]);
+            vector<float> w = tk.numbers(arguments[2]);
+
+            cout << "θ of vw = " << v2.getAngle(v,w) << endl;
         }
     }
     return 0;
