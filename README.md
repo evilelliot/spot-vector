@@ -2,6 +2,10 @@
 [![GitHub issues](https://img.shields.io/github/issues/evilelliot/spot-vector)](https://github.com/evilelliot/spot-vector/issues)
 ![Language](https://img.shields.io/badge/C%2B%2B-Language-blue)
 
+---
+[![Spot preview](https://i.imgur.com/r2OBKLn.png "Spot preview")](https://i.imgur.com/r2OBKLn.png "Spot preview")
+
+---
 Este proyecto toma las operaciones del algebra vectorial básica y las evalua de forma automatica gracias a las expresiones regulares y la clase Tokenizer.
 
 Las operaciones implementadas al momento son:
